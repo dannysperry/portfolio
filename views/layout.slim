@@ -4,12 +4,12 @@ html
     meta charset="utf-8"
     title
       | Danny Sperry | Portland, OR | Ruby & Rails Developer
-      link rel="stylesheet" media="screen" href="/main.css"
+    link[rel="stylesheet" type="text/css" href="/stylesheets/main.css" media="screen"]
       /[if lt IE 9]
         script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
   body
     .main_wrapper
-      header
+      header#root
         .logo
           | Danny Sperry
         nav
@@ -22,16 +22,21 @@ html
             li.contact Contact
       .content_wrapper
         == yield
-      footer
-        .footer_wrapper
-          ul.socialLinks
-            li.footer_icon-twitter
-              a href="https://twitter.com/dannysperry"
-            li.footer_icon-linkedin
-              a href="https://www.linkedin.com/in/dannysperry"
-            li.footer_icon-wordpress
-              a href="http://dantronics.wordpress.com/"
-            li.footer_icon-github
-              a href="https://github.com/dannysperry"
-            li.footer_icon-stackoverflow
-              a href="http://stackoverflow.com/users/892726/dd-s"
+      #root_footer
+    footer#footer
+      .footer_wrapper
+        ul.socialLinks
+          li.footer_icon-twitter
+            a href="https://twitter.com/dannysperry"
+          li.footer_icon-linkedin
+            a href="https://www.linkedin.com/in/dannysperry"
+          li.footer_icon-wordpress
+            a href="http://dantronics.wordpress.com/"
+          li.footer_icon-github
+            a href="https://github.com/dannysperry"
+          li.footer_icon-stackoverflow
+            a href="http://stackoverflow.com/users/892726/dd-s"
+        p
+          |  &copy
+          = Date.today.year
+          |  Danny Sperry
