@@ -43,24 +43,24 @@ class Portfolio < Sinatra::Base
   end
 
   post '/' do
-    options = {
-      to: 'danny.sperry@gmail.com',
-      from: params[:email],
-      subject: "#{params[:name]} contacted you from dannysperry.com",
-      body: params[:message],
-      :via => :smtp,
-      :via_options => {
-        :address        => 'smtp.gmail.com',
-        :port           => '465',
-        :enable_starttls_auto => true,
-        :user_name      => settings.gmail_user_name,
-        :password       => settings.gmail_password,
-        :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
-        :domain         => "www.dannysperry.com" # the HELO domain provided by the client to the server
-      }
-    }
+    # options = {
+    #   to: 'danny.sperry@gmail.com',
+    #   from: params[:email],
+    #   subject: "#{params[:name]} contacted you from dannysperry.com",
+    #   body: params[:message],
+    #   :via => :smtp,
+    #   :via_options => {
+    #     :address        => 'smtp.gmail.com',
+    #     :port           => '465',
+    #     :enable_starttls_auto => true,
+    #     :user_name      => settings.gmail_user_name,
+    #     :password       => settings.gmail_password,
+    #     :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
+    #     :domain         => "www.dannysperry.com" # the HELO domain provided by the client to the server
+    #   }
+    # }
 
-    Pony.mail(options)
+    # Pony.mail(options)
 
     slim :index
   end
