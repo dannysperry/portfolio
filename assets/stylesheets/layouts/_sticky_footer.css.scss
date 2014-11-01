@@ -1,6 +1,6 @@
 @import "../base/global.css.scss";
 
-@include sticky-footer(125px);
+@include sticky-footer($footer-height);
 
 #footer {
   background: $c-dark_gray;

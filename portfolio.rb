@@ -31,11 +31,11 @@ class Portfolio < Sinatra::Base
   end
 
   error do
-      slim :'errors/500'
-    end
+    slim :error
+  end
 
   not_found do
-    slim :'errors/404'
+    slim :not_found
   end
 
   get '/' do
