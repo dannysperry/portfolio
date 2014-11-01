@@ -7,15 +7,15 @@
       | Sed consectetur imperdiet neque, at lacinia est posuere vitae. Sed lectus erat, semper id massa et, fringilla ullamcorper nisi. Maecenas tincidunt aliquet enim, sed egestas arcu. Vivamus quis dapibus odio, eu convallis dui. Duis vestibulum mi ac consectetur dictum. Suspendisse urna erat, finibus eu iaculis quis, congue id dolor. In elementum est nec sapien aliquet fermentum. Integer rutrum risus ut sem sodales rutrum. Nulla eu pretium nibh. Etiam nec magna suscipit, lacinia dui at, rhoncus dui. Proin sit amet metus pretium, dapibus risus a, pellentesque massa.
     ul.about-social_icons
       li.footer_icon-twitter
-        a href="https://twitter.com/dannysperry"
+        a[href="https://twitter.com/dannysperry"]
       li.footer_icon-linkedin
-        a href="https://www.linkedin.com/in/dannysperry"
+        a[href="https://www.linkedin.com/in/dannysperry"]
       li.footer_icon-wordpress
-        a href="http://dantronics.wordpress.com/"
+        a[href="http://dantronics.wordpress.com/"]
       li.footer_icon-github
-        a href="https://github.com/dannysperry"
+        a[href="https://github.com/dannysperry"]
       li.footer_icon-stackoverflow
-        a href="http://stackoverflow.com/users/892726/dd-s"
+        a[href="http://stackoverflow.com/users/892726/dd-s"]
 
   .about-details
     ul.about-skill_icons
@@ -40,32 +40,32 @@
     ul.portolio-list
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
       li
         div
-          a href="#"
+          a[href="#"]
             .portfolio-item--overlay
             img src="#" alt="#"
 
@@ -80,19 +80,21 @@
 
   .contact-container
     .contact-form
-      form action="/contact" method="post"
+      form action="/" method="post" class="contact_form"
         input type="text" name="name" placeholder="Name"
         input type="text" name="email" placeholder="Email"
-        input type="text" name="subject" placeholder="Subject"
         textarea name="message" placeholder="Message"
+        input.button type="submit" value="Send Message"
 
     .contact-information
       .contact-info--section
         h3 Danny Sperry
         ul.contact-info--list
           li Phone: 503.724.1893
-          li Email:
-            a href="mailto:danny.sperry@gmail.com"
+          li
+            | Email:
+            a[href="mailto:danny.sperry@gmail.com"]
+              | danny.sperry@gmail.com
           li Address: N Portland, OR 97217
       .contact-info--section
         h3 Availability Status
