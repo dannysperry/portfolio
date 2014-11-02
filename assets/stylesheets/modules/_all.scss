@@ -1,2 +1,9 @@
+.section {
+  width: $global-width;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
 @import './landing-image.css.scss';
 @import './about.css.scss';
+@import './portfolio.css.scss';

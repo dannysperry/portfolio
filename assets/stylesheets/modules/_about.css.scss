@@ -11,7 +11,7 @@
   }
 
   .about-description, .about-details {
-    width: $global_width/2;
+    width: calc(#{$global_width/2} - 20px);
     padding: 10px;
     height: 100%;
   }

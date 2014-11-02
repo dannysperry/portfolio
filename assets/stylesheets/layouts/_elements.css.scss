@@ -9,7 +9,7 @@ html, body {
 
 h1 {
   font-size: $h1-size;
-  font-weight: bolder;
+  font-weight: 900;
   margin-bottom: 15px;
 }
 
@@ -64,5 +64,13 @@ li a {text-decoration: none;}
 
 ul.inline li {
   display: inline-block;
+}
+
+.opaque {
+  opacity: 1 !important;
+}
+
+.transparent {
+  opacity: 0 !important;
 }
 
