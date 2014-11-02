@@ -1,21 +1,23 @@
 html, body {
   height: 100%;
+  font-family: $open-family;
 }
 
 h1 {
-
+  font-size: $h1-size;
+  font-weight: bolder;
 }
 
 h2 {
-
+  font-size: $h2-size;
 }
 
 h3 {
-
+  font-size: $h3-size;
 }
 
 h4 {
-
+  font-size: $h4-size;
 }
 
 h5 {
@@ -47,6 +49,10 @@ em {
 }
 
 a {
+  cursor: hand;
+}
 
+ul.inline li {
+  display: inline-block;
 }
 

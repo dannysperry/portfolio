@@ -10,16 +10,22 @@ html
   body
     .main_wrapper#root
       header
-        .logo
-          | Danny Sperry
-        nav
-          ul
-            li.about About
-            li.portfolio Portfolio
-            li.blog
-              a href="http://dantronics.wordpress.com/"
-                | Blog
-            li.contact Contact
+        .header-container
+          .logo Danny Sperry
+          nav
+            ul.inline
+              li.about
+                a[href="#about"]
+                  | About
+              li.portfolio
+                a[href="#portfolio"]
+                  | Portfolio
+              li.blog
+                a[href="http://dantronics.wordpress.com/"]
+                  | Blog
+              li.contact
+                a[href="#blog"]
+                  | Contact
       .content_wrapper
         == yield
       #root_footer
