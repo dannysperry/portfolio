@@ -1,16 +1,23 @@
 $c-dark_gray: #343434;
-$c-light_gray: #f2f2f1;
+
 $c-white: #fff;
+$c-off_white: #f1f1f1;
+
+$c-gray_text: #999;
+$c-light_background: #f2f2f1;
+$c-dark_background: $c-dark_gray;
 
 $h1-size: 24px;
 $h2-size: 18px;
 $h3-size: 14px;
 $h4-size: 12px;
 
-$footer-height: 125px;
+$global_width: 960px;
+$footer_height: 125px;
 
 $one-third: 33%;
 $two-thirds: 66%;
 $full-length: 100%;
 
 $open-family: 'open_sans', Arial, sans-serif;
+

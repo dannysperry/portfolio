@@ -11,7 +11,7 @@ header {
 }
 
 .header-container {
-  width: 960px;
+  width: $global_width;
   margin: 0 auto;
   @include clearfix;
 
@@ -38,7 +38,6 @@ header {
     a {
       padding: 25px 15px;
       display: block;
-      text-decoration: none;
     }
   }
 }

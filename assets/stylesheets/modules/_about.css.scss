@@ -1,0 +1,109 @@
+.section-about {
+  margin: 0 auto;
+  @include clearfix;
+  height: 500px;
+
+  div[class^="about-section"] {
+    width: 50%;
+    height: 500px;
+    float: left;
+    display: inline-block
+  }
+
+  .about-description, .about-details {
+    width: $global_width/2;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .about-section--first {
+    background: $c-light_background;
+  }
+
+  .about-section--second {
+    background: $c-dark_background;
+  }
+
+  .about-description {
+    float: right;
+    margin-top: 100px;
+
+    h1 {
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    p {
+      color: $c-gray_text;
+    }
+
+    li {
+      margin: 0 3px;
+    }
+
+    a {
+      width:10px;
+      color: $c-dark_gray;
+
+      &:before {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about-details {
+    ul {
+      margin-left: 75px;
+      margin-top: 60px;
+    }
+
+    li {
+      height: 101px;
+      padding-bottom: 35px;
+      border-left: 2px dashed #555;
+
+      &:last-of-type {
+        border: none;
+
+        h3 {text-transform: none;}
+      }
+
+      .icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 3px solid #555;
+        display: inline-block;
+        float: left;
+        margin-left: -30px;
+        background-color: $c-dark_background;
+
+        &:before { color: #555;}
+      }
+
+      .icon-ruby:before {
+        margin-top: 9px;
+        margin-left: 9px;
+        font-size: 37px;
+      }
+
+      .icon-iphone:before {
+        margin-top: 8px;
+        margin-left: 18px;
+        font-size: 44px;
+      }
+
+      .description {
+        padding-left: 75px;
+      }
+    }
+
+    h3 {
+      color: $c-off_white;
+    }
+
+    p {
+      color: $c-gray_text;
+    }
+  }
+}

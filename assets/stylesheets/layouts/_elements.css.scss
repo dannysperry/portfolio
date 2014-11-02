@@ -3,17 +3,24 @@ html, body {
   font-family: $open-family;
 }
 
+@for $i from 1 through 6 {
+  h#{$i} {text-transform: uppercase;}
+}
+
 h1 {
   font-size: $h1-size;
   font-weight: bolder;
+  margin-bottom: 15px;
 }
 
 h2 {
   font-size: $h2-size;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-size: $h3-size;
+  margin-bottom: 5px;
 }
 
 h4 {
@@ -30,6 +37,7 @@ h6 {
 
 p {
   line-height: 25px;
+  font-size: 13px;
 }
 
 span {
@@ -51,6 +59,8 @@ em {
 a {
   cursor: hand;
 }
+
+li a {text-decoration: none;}
 
 ul.inline li {
   display: inline-block;
