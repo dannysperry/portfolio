@@ -12,7 +12,7 @@ header {
   @include clearfix;
 
   .logo {
-    width: calc(#{$one-third} - 40px);
+    width: calc(#{$global_width} / 3 - 40px);
     float: left;
     padding: 20px 10px;
     font-size: $h2-size 10px;

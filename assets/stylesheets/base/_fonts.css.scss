@@ -79,12 +79,12 @@
   }
 }
 
-.icon-stackoverflow:before { content: '\e800'; }
-.icon-wordpress:before { content: '\e803'; }
-.icon-github:before { content: '\e804'; }
-.icon-twitter:before { content: '\e805'; }
-.icon-linkedin:before { content: '\e806'; }
-.icon-reddit:before { content: '\e807'; }
+$icon-stackoverflow: '\e800';
+$icon-wordpress: '\e803';
+$icon-github: '\e804';
+$icon-twitter: '\e805';
+$icon-linkedin: '\e806';
+$icon-reddit: '\e807';
 
 
 // Mfizz font package for icons
