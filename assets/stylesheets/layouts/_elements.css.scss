@@ -3,6 +3,10 @@ html, body {
   font-family: $open-family;
 }
 
+body {
+  padding-top: $header-height;
+}
+
 @for $i from 1 through 6 {
   h#{$i} {text-transform: uppercase;}
 }
@@ -98,7 +102,6 @@ ul.inline li {
 
 
 input[type="submit"] {
-  @include border-radius(3px);
   @include box-shadow(rgba(0,0,0,0.1) -1px -4px 0 inset);
   border: none;
   color: #fff;
@@ -106,5 +109,15 @@ input[type="submit"] {
   padding: 8px 25px;
   cursor: pointer;
   font: 13px/21px 'open_sansregular',Arial,sans-serif;
+
+  &:active, &:visited {
+    outline: none;
+  }
+
+  &:hover {
+    @include box-shadow(transparent 0 0 0);
+    margin-top: 3px;
+    padding-top: 7px;
+  }
 }
 
