@@ -74,3 +74,36 @@ ul.inline li {
   opacity: 0 !important;
 }
 
+
+
+.checked, .unchecked {
+  &:before {
+    content: "✓";
+    display: inline-block;
+    margin: 4px 10px inherit -20px;
+    padding: 0 4px 5px;
+    width: 13px;
+    height: 16px;
+    font-size: 20px;
+    border: 2px solid $c-gray_text;
+  }
+}
+
+.unchecked:before {
+  color: transparent;
+}
+
+
+
+
+input[type="submit"] {
+  @include border-radius(3px);
+  @include box-shadow(rgba(0,0,0,0.1) -1px -4px 0 inset);
+  border: none;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 25px;
+  cursor: pointer;
+  font: 13px/21px 'open_sansregular',Arial,sans-serif;
+}
+
