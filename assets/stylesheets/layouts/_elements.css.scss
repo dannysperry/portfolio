@@ -91,6 +91,7 @@ ul.inline li {
     height: 16px;
     font-size: 20px;
     border: 2px solid $c-gray_text;
+    color: $c-dark_gray;
   }
 }
 
@@ -115,9 +116,21 @@ input[type="submit"] {
   }
 
   &:hover {
-    @include box-shadow(transparent 0 0 0);
+    @include box-shadow(none);
     margin-top: 3px;
     padding-top: 7px;
+
+    @media (max-width: $small-bp) {
+      margin-top: 0;
+      padding-top: 8px;
+    }
+  }
+
+  @media (max-width: $small-bp) {
+   width: 300px;
+   float: left;
+   clear: left;
+   @include box-shadow(none);
   }
 }
 

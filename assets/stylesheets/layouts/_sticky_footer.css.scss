@@ -2,6 +2,10 @@
 
 @include sticky-footer(calc(#{$footer_height} - 100px));
 
+#root_footer {
+  display: none;
+}
+
 #footer {
   padding: 50px 0;
   background: $c-dark_gray;

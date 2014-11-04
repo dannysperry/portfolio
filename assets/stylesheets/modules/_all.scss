@@ -1,11 +1,14 @@
 .section {
   width: $large-bp;
-
+  margin: 0 auto;
+  padding-left: 20px;
   @media (max-width: $large-bp) {
     width: $medium-bp;
   }
-  margin: 0 auto;
-  padding-left: 20px;
+  @media (max-width: $small-bp) {
+    width: 300px;
+    padding: 0;
+  }
 }
 
 @import './landing-image.css.scss';

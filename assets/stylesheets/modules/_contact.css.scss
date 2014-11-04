@@ -1,6 +1,11 @@
 .section-contact {
   padding-top: 120px;
   margin-bottom: 120px;
+  @media (max-width: $small-bp) {
+    padding-top: 60px;
+    margin: 0 auto 60px;
+    width: 320px;
+  }
 
   .contact-form {
     display: inline-block;
@@ -14,6 +19,9 @@
      .column {
        float: left;
        width: calc(50% - 5px);
+       @media (max-width: $small-bp) {
+        clear: left;
+       }
 
        &:first-of-type {
         margin-right: 10px;
@@ -33,6 +41,11 @@
       width: calc(100% - 20px);
       font-family: $open-family;
       border: 1px solid $c-light_background;
+      @media (max-width: $small-bp) {
+       width: 280px;
+       float: left;
+       clear: left;
+      }
     }
 
     textarea {
@@ -43,13 +56,16 @@
   .contact-information {
     display: inline-block;
     width: calc(#{$large-bp} / 3 - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
     @media (max-width: $large-bp) {
       width: calc(#{$medium-bp} - 20px);
       margin: 50px 0 0;
     }
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 50px;
+    @media (max-width: $small-bp) {
+      width: 300px;
+    }
 
     .contact-info--section {
       margin-bottom: 40px;
@@ -58,6 +74,13 @@
     @media (max-width: $large-bp) {
       .contact-info--section:first-child { float: left;}
       .contact-info--section:last-child { float: right;}
+    }
+
+    @media (max-width: $small-bp) {
+      .contact-info--section:last-child {
+        float: left;
+        clear: left;
+      }
     }
 
     h2 {

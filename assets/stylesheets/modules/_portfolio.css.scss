@@ -1,5 +1,6 @@
 .section-portfolio {
   padding-top: 120px;
+  @media (max-width: $small-bp) {padding-top: 60px;}
 
   .portfolio-list {
     margin-top: 50px;
@@ -30,6 +31,10 @@
       &:nth-child(2n+1) {
         margin-left: 0;
       }
+    }
+
+    @media (max-width: $small-bp) {
+      margin-left: 0;
     }
 
     .portfolio-item--overlay {

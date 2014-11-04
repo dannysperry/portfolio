@@ -7,6 +7,11 @@
       width: calc(#{$medium-bp} - 20px);
     }
   }
+  @media (max-width: $small-bp) {
+    .section {
+      width: 300px;
+    }
+  }
 
   h1 {
     &, & a {
@@ -17,5 +22,6 @@
 
   p {
     color: $c-gray_text;
+    @media (max-width: $small-bp) {width: 280px;}
   }
 }
