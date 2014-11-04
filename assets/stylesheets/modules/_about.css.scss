@@ -3,17 +3,34 @@
   @include clearfix;
   height: 500px;
 
+  @media (max-width: 960px) {
+    height: auto;
+    width: 100%;
+  }
+
+
   div[class^="about-section"] {
     width: 50%;
     height: 500px;
     float: left;
-    display: inline-block
+    display: inline-block;
+
+    @media (max-width: 960px) {
+      width: 100%;
+      float: none;
+      display: block;
+      @include clearfix;
+    }
   }
 
   .about-description, .about-details {
-    width: calc(#{$global_width/2} - 20px);
+    width: calc(#{$large-bp/2} - 20px);
     padding: 10px;
     height: 100%;
+    @media (max-width: 960px) {
+      margin: 0 auto;
+      float: initial !important;
+    }
   }
 
   .about-section--first {
@@ -109,6 +126,9 @@
 
     h3 {
       color: $c-off_white;
+      @media (max-width: $large-bp) {
+        display: none;
+      }
     }
 
     p {

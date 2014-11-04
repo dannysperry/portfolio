@@ -1,5 +1,9 @@
 .section {
-  width: $global-width;
+  width: $large-bp;
+
+  @media (max-width: $large-bp) {
+    width: $medium-bp;
+  }
   margin: 0 auto;
   padding-left: 20px;
 }

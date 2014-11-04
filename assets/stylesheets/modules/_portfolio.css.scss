@@ -20,8 +20,16 @@
       height: 100%;
     }
 
-    &:nth-child(3n+1) {
-      margin-left: 0;
+    @media (min-width: $large-bp) {
+      &:nth-child(3n+1) {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $large-bp) {
+      &:nth-child(2n+1) {
+        margin-left: 0;
+      }
     }
 
     .portfolio-item--overlay {
