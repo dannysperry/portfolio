@@ -19,12 +19,13 @@
 
   .contact-form {
     display: inline-block;
-    width: 100%;
+    width: 60%;
     margin-left: 0;
     margin-right: 20px;
     margin-top: 50px;
     float: left;
-    @media (max-width: $small-bp) {
+
+    @media (max-width: $large-bp) {
       width: 100%;
     }
 
