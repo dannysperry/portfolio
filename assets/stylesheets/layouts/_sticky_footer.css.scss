@@ -1,6 +1,9 @@
 @import "../base/global.css.scss";
 
 @include sticky-footer(calc(#{$footer_height} - 100px));
+@media (max-width: $small-bp) {
+  @include sticky-footer(calc(#{$footer_height} - 90px));
+}
 
 #root_footer {
   display: none;
@@ -10,6 +13,10 @@
   padding: 50px 0;
   background: $c-dark_gray;
   text-align: center;
+
+  @media (max-width: $small-bp) {
+    padding: 20px 0;
+  }
 
   .socialLinks {
     li {

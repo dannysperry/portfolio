@@ -1,6 +1,6 @@
 .section-portfolio {
   padding-top: 120px;
-  @media (max-width: $small-bp) {padding-top: 60px;}
+  @media (max-width: $small-bp) {padding-top: 39px;}
 
   .portfolio-list {
     margin-top: 50px;
@@ -26,14 +26,20 @@
         margin-left: 0;
       }
     }
-
     @media (max-width: $large-bp) {
       &:nth-child(2n+1) {
         margin-left: 0;
       }
     }
-
     @media (max-width: $small-bp) {
+      &:nth-child(1n+1) {
+        margin: 0 auto;
+        position: static;
+        float: none;
+        margin-bottom: 40px;
+      }
+    }
+    @media (max-width: $extra_small-bp) {
       margin-left: 0;
     }
 

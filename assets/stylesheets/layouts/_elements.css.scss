@@ -120,13 +120,17 @@ input[type="submit"] {
     margin-top: 3px;
     padding-top: 7px;
 
-    @media (max-width: $small-bp) {
+    @media (max-width: $extra_small-bp) {
       margin-top: 0;
       padding-top: 8px;
     }
   }
 
   @media (max-width: $small-bp) {
+    width: calc(100% + 22px);
+  }
+
+  @media (max-width: $extra_small-bp) {
    width: 300px;
    float: left;
    clear: left;

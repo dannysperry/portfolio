@@ -9,6 +9,11 @@
   }
   @media (max-width: $small-bp) {
     .section {
+      width: 400px;;
+    }
+  }
+  @media (max-width: $extra_small-bp) {
+    .section {
       width: 300px;
     }
   }
@@ -22,6 +27,6 @@
 
   p {
     color: $c-gray_text;
-    @media (max-width: $small-bp) {width: 280px;}
+    @media (max-width: $extra_small-bp) {width: 280px;}
   }
 }

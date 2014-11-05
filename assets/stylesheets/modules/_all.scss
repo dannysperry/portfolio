@@ -6,6 +6,10 @@
     width: $medium-bp;
   }
   @media (max-width: $small-bp) {
+    width: 460px;
+    padding-left: 0;
+  }
+  @media (max-width: $extra_small-bp) {
     width: 300px;
     padding: 0;
   }

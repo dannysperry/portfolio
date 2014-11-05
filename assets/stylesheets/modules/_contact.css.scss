@@ -3,17 +3,24 @@
   margin-bottom: 120px;
   @media (max-width: $small-bp) {
     padding-top: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  @media (max-width: $extra_small-bp) {
     margin: 0 auto 60px;
     width: 320px;
   }
 
   .contact-form {
     display: inline-block;
-    width: calc(#{$large-bp} / 3 * 2 - 20px);
+    width: 100%;
     margin-left: 0;
     margin-right: 20px;
     margin-top: 50px;
     float: left;
+    @media (max-width: $small-bp) {
+      width: 100%;
+    }
 
     .row {
      .column {
@@ -21,6 +28,8 @@
        width: calc(50% - 5px);
        @media (max-width: $small-bp) {
         clear: left;
+        width: 100%;
+        margin-bottom: 10px;
        }
 
        &:first-of-type {
@@ -42,7 +51,7 @@
       font-family: $open-family;
       border: 1px solid $c-light_background;
       @media (max-width: $small-bp) {
-       width: 280px;
+       width: 100%;
        float: left;
        clear: left;
       }
