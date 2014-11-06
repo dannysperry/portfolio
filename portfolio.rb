@@ -4,11 +4,12 @@ require 'sinatra/base'
 require 'sinatra/config_file'
 require 'slim'
 
+# Base routes and setup actions for racks config.ru
 class Portfolio < Sinatra::Base
   # set sinatra's variables
   set :app_file, __FILE__
   set :root, File.dirname(__FILE__)
-  set :views, "views"
+  set :views, 'views'
   set :public_folder, 'assets'
 
   register Sinatra::ConfigFile
@@ -16,7 +17,7 @@ class Portfolio < Sinatra::Base
 
   configure :development do
     require 'pry'
-    require "sinatra/reloader"
+    require 'sinatra/reloader'
     register Sinatra::Reloader
     also_reload 'config/*.rb'
   end
@@ -26,7 +27,7 @@ class Portfolio < Sinatra::Base
   end
 
   get '/stylesheets/:name' do
-    content_type 'text/css', :charset => 'utf-8'
+    content_type 'text/css', charset: 'utf-8'
     sass :"stylesheets/#{params[:name]}", Compass.sass_engine_options
   end
 
@@ -43,27 +44,31 @@ class Portfolio < Sinatra::Base
   end
 
   post '/' do
-    # options = {
-    #   to: 'danny.sperry@gmail.com',
-    #   from: params[:email],
-    #   subject: "#{params[:name]} contacted you from dannysperry.com",
-    #   body: params[:message],
-    #   :via => :smtp,
-    #   :via_options => {
-    #     :address        => 'smtp.gmail.com',
-    #     :port           => '465',
-    #     :enable_starttls_auto => true,
-    #     :user_name      => settings.gmail_user_name,
-    #     :password       => settings.gmail_password,
-    #     :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
-    #     :domain         => "www.dannysperry.com" # the HELO domain provided by the client to the server
-    #   }
-    # }
+    options = {
+      to: 'danny.sperry@gmail.com',
+      from: params[:email],
+      subject: "#{params[:name]} contacted you from dannysperry.com",
+      body: params[:message],
+      via: :smtp,
+      via_options: {
+        address: 'smtp.gmail.com',
+        port: '465',
+        enable_starttls_auto: true,
+        user_name: settings.gmail_user_name,
+        password: settings.gmail_password,
+        authentication: :plain,
+        domain: 'www.dannysperry.com'
+      }
+    }
 
-    # Pony.mail(options)
+    Pony.mail(options)
 
     slim :index
   end
 
-  run! if app_file == $0
+  get '/resume' do
+    send_file File.join(File.dirname(__FILE__), 'assets', 'Resume-DannySperry.pdf')
+  end
+
+  run! if app_file == $PROGRAM_NAME
 end
