@@ -16,6 +16,17 @@ class Portfolio < Sinatra::Base
   register Sinatra::ConfigFile
   config_file './config/config.yml'
 
+  Mail.defaults do
+    delivery_method :smtp,
+                    address: 'smtp.gmail.com',
+                    port: '587',
+                    domain: 'heroku.com',
+                    user_name: ENV['GMAIL_USERNAME'],
+                    password: ENV['GMAIL_PASSWORD'],
+                    authentication: 'plain',
+                    enable_starttls_auto: true
+  end
+
   configure :development do
     require 'pry'
     require 'sinatra/reloader'
@@ -25,16 +36,6 @@ class Portfolio < Sinatra::Base
 
   configure do
     Compass.add_project_configuration(File.join(root, 'config', 'compass.rb'))
-    Mail.defaults do
-      delivery_method :smtp,
-                      address: 'smtp.gmail.com',
-                      port: '425',
-                      domain: 'heroku.com',
-                      user_name: ENV['GMAIL_USERNAME'],
-                      password: ENV['GMAIL_PASSWORD'],
-                      authentication: 'plain',
-                      enable_starttls_auto: true
-    end
   end
 
   get '/stylesheets/:name' do
@@ -55,19 +56,15 @@ class Portfolio < Sinatra::Base
   end
 
   post '/' do
-    mail = Mail.new do
-      to 'danny.sperry@gmail.com'
-      from 'danny@wearefine.com'
-      subject 'Feedback for my Sintra app'
-      text_part do
-        body 'test message'
-      end
-    end
+    mail = Mail.new { to 'danny.sperry@gmail.com' }
+    mail[:from] = "#{params[:email]}"
+    mail[:body] = "From #{params[:email]},
 
-    mail.delivery_method :smtp
-    mail.deliver
+    #{params[:message]}"
+    mail[:subject] = "dannysperry.pw - #{params[:name]}"
+    mail.deliver!
 
-    slim :index
+    redirect '/'
   end
 
   get '/resume' do
