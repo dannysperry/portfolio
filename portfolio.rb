@@ -19,7 +19,7 @@ class Portfolio < Sinatra::Base
   Mail.defaults do
     delivery_method :smtp,
                     address: 'smtp.gmail.com',
-                    port: '587',
+                    port: '25',
                     domain: 'heroku.com',
                     user_name: ENV['GMAIL_USERNAME'],
                     password: ENV['GMAIL_PASSWORD'],
