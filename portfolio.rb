@@ -3,6 +3,7 @@ require 'compass'
 require 'sinatra/base'
 require 'sinatra/config_file'
 require 'slim'
+require 'mail'
 
 # Base routes and setup actions for racks config.ru
 class Portfolio < Sinatra::Base
@@ -24,6 +25,16 @@ class Portfolio < Sinatra::Base
 
   configure do
     Compass.add_project_configuration(File.join(root, 'config', 'compass.rb'))
+    Mail.defaults do
+      delivery_method :smtp,
+                      address: 'smtp.gmail.com',
+                      port: '425',
+                      domain: 'heroku.com',
+                      user_name: ENV['GMAIL_USERNAME'],
+                      password: ENV['GMAIL_PASSWORD'],
+                      authentication: 'plain',
+                      enable_starttls_auto: true
+    end
   end
 
   get '/stylesheets/:name' do
@@ -44,24 +55,17 @@ class Portfolio < Sinatra::Base
   end
 
   post '/' do
-    options = {
-      to: 'danny.sperry@gmail.com',
-      from: params[:email],
-      subject: "#{params[:name]} contacted you from dannysperry.com",
-      body: params[:message],
-      via: :smtp,
-      via_options: {
-        address: 'smtp.gmail.com',
-        port: '465',
-        enable_starttls_auto: true,
-        user_name: settings.gmail_user_name,
-        password: settings.gmail_password,
-        authentication: :plain,
-        domain: 'www.dannysperry.com'
-      }
-    }
+    mail = Mail.new do
+      to 'danny.sperry@gmail.com'
+      from 'danny@wearefine.com'
+      subject 'Feedback for my Sintra app'
+      text_part do
+        body 'test message'
+      end
+    end
 
-    Pony.mail(options)
+    mail.delivery_method :smtp
+    mail.deliver
 
     slim :index
   end
