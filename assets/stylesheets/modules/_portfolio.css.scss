@@ -2,6 +2,24 @@
   padding-top: 120px;
   @media (max-width: $small-bp) {padding-top: 39px;}
 
+  .with_bullet {
+    list-style-type: circle;
+    margin-bottom: 50px;
+
+    li {
+      margin-bottom: 8px;
+      font-size: 13px;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none
+        }
+      }
+    }
+  }
+
   .portfolio-list {
     margin-top: 50px;
     @include clearfix;
