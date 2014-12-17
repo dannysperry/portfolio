@@ -7,6 +7,7 @@ gem 'slim'
 gem 'sass'
 gem 'compass'
 gem 'mail'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'sinatra-reloader'
