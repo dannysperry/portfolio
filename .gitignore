@@ -3,3 +3,4 @@
 .sass-cache/*
 .ruby-version
 .ruby-gemset
+config/config.yml
