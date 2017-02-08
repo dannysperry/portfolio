@@ -68,6 +68,7 @@
 
 .icon-stackoverflow, .icon-wordpress, .icon-github, .icon-twitter, .icon-linkedin, .icon-reddit {
   &:before {
+    color: $c-white;
     font-family: "social-icons";
     @extend .font_icon--styles;
 

@@ -108,16 +108,17 @@
       }
 
       .icon {
+        $color: $c-off_white;
         width: 55px;
         height: 55px;
         border-radius: 30px;
-        border: 3px solid #555;
+        border: 3px solid $color;
         display: inline-block;
         float: left;
         margin-left: -30px;
         background-color: $c-dark_background;
 
-        &:before { color: #555;}
+        &:before { color: $color;}
       }
 
       .icon-oop:before {

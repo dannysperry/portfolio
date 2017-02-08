@@ -3,8 +3,7 @@ $landing_image-height: 526px;
 .landing_image {
   width: 100%;
   height: $landing_image-height;
-  background-image: url('../../images/pdx.jpg');
-  background-position: 50% -282px;
+  background-image: url('../../images/forest.jpg');
   border-bottom: 3px solid $c-dark_gray;
   @include clearfix;
 
