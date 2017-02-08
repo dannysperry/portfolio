@@ -69,3 +69,9 @@ DEPENDENCIES
   sinatra-contrib
   sinatra-reloader
   slim
+
+RUBY VERSION
+   ruby 2.1.1p76
+
+BUNDLED WITH
+   1.14.3
