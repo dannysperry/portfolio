@@ -2,9 +2,15 @@
   padding-top: 120px;
   @media (max-width: $small-bp) {padding-top: 39px;}
 
+  .portfolio-more {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+
   .with_bullet {
     list-style-type: circle;
-    margin-bottom: 50px;
 
     li {
       margin-bottom: 8px;
@@ -16,6 +22,54 @@
         &:hover {
           text-decoration: none
         }
+      }
+    }
+  }
+
+  .check_more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    color: #666;
+    font-size: .9em;
+    line-height: 2;
+    border: 1px solid #ddd;
+    border-radius: .25em;
+  }
+
+  .check_more {
+    display: none;
+
+    &:checked {
+      & ~ .check_more-trigger {
+        &:first-of-type {
+          display: none;
+        }
+        &:last-of-type {
+          display: inline-block;
+        }
+        &:before {
+          content: 'Show less';
+        }
+      }
+      & ~ .portfolio-more {
+        opacity: 1;
+        font-size: inherit;
+        max-height: 999em;
+      }
+    }
+
+    & ~ .check_more-trigger {
+      margin: 30px 0;
+
+      &:first-of-type {
+        display: inline-block;
+      }
+      &:last-of-type {
+        display: none;
+      }
+      &:before {
+        content: 'Show more';
       }
     }
   }
