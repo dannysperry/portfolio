@@ -1,6 +1,25 @@
 .section-portfolio {
+  background-color: $c-med_background;
+  color: $c-gray_text;
   padding-top: 120px;
   @media (max-width: $small-bp) {padding-top: 39px;}
+
+  h1 {
+    margin-bottom: 10px;
+    color: $c-white;
+  }
+
+  p {
+    line-height: 15px;
+  }
+  
+  a {
+    color: lighten($c-med_purple_blue, 40%);
+  }
+
+  li {
+    color: darken($c-white, 15%);
+  }
 
   .portfolio-more {
     opacity: 0;
@@ -17,8 +36,6 @@
       font-size: 13px;
 
       a {
-        text-decoration: underline;
-
         &:hover {
           text-decoration: none
         }
