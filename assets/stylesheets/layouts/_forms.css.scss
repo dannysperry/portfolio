@@ -1,0 +1,51 @@
+form {
+  display: inline-block;
+  width: 60%;
+  margin-left: 0;
+  margin-right: 20px;
+  margin-top: 50px;
+  float: left;
+
+  @media (max-width: $large-bp) {
+    width: 100%;
+  }
+
+  .row {
+    .column {
+      float: left;
+      width: calc(50% - 5px);
+      @media (max-width: $small-bp) {
+        clear: left;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  input[type="text"], input[type="email"], textarea, input[type="text"], textarea {
+    background: $c-light_background;
+    border: 0 none;
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 14px;
+    outline: 0 none;
+    padding: 12px 10px;
+    resize: none;
+    width: calc(100% - 20px);
+    font-family: $open-family;
+    border: 1px solid $c-light_background;
+    @media (max-width: $small-bp) {
+      width: calc(100% - 20px);
+      float: left;
+      clear: left;
+    }
+  }
+
+  textarea {
+    height: 190px;
+  }
+}

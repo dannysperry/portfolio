@@ -68,7 +68,6 @@
 
 .icon-stackoverflow, .icon-wordpress, .icon-github, .icon-twitter, .icon-linkedin, .icon-reddit {
   &:before {
-    color: $c-white;
     font-family: "social-icons";
     @extend .font_icon--styles;
 
@@ -79,13 +78,6 @@
     margin-left: .2em;
   }
 }
-
-$icon-stackoverflow: '\e800';
-$icon-wordpress: '\e803';
-$icon-github: '\e804';
-$icon-twitter: '\e805';
-$icon-linkedin: '\e806';
-$icon-reddit: '\e807';
 
 
 // Mfizz font package for icons

@@ -1,0 +1,7 @@
+$large-bp: 960px;
+$medium-bp: 640px;
+$small-bp: 568px;
+$extra_small-bp: 460px;
+
+$one-third: calc(#{$large-bp} / 3);
+$two-thirds: calc(#{$large-bp} / 3 * 2);
