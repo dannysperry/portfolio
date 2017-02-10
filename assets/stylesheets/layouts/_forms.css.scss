@@ -27,9 +27,6 @@ form {
   }
 
   input[type="text"], input[type="email"], textarea, input[type="text"], textarea {
-    background: $c-light_background;
-    border: 0 none;
-    color: #666;
     font-size: 13px;
     margin: 0 0 14px;
     outline: 0 none;
@@ -37,7 +34,6 @@ form {
     resize: none;
     width: calc(100% - 20px);
     font-family: $open-family;
-    border: 1px solid $c-light_background;
     @media (max-width: $small-bp) {
       width: calc(100% - 20px);
       float: left;

@@ -1,27 +1,18 @@
 .section-portfolio {
-  background-color: $c-med_background;
-  color: $c-gray_text;
-  padding-top: 120px;
+  padding-top: 57px;
+  padding-bottom: 28px;
   @media (max-width: $small-bp) {padding-top: 39px;}
 
   h1 {
     margin-bottom: 10px;
-    color: $c-white;
   }
 
   p {
     line-height: 15px;
   }
-  
-  a {
-    color: lighten($c-med_purple_blue, 40%);
-  }
-
-  li {
-    color: darken($c-white, 15%);
-  }
 
   .portfolio-more {
+    display: none;
     opacity: 0;
     max-height: 0;
     font-size: 0;
@@ -34,6 +25,7 @@
     li {
       margin-bottom: 8px;
       font-size: 13px;
+      line-height: 15px;
 
       a {
         &:hover {
@@ -47,10 +39,9 @@
     cursor: pointer;
     display: inline-block;
     padding: 0 .5em;
-    color: #666;
     font-size: .9em;
     line-height: 2;
-    border: 1px solid #ddd;
+    border: 1px solid;
     border-radius: .25em;
   }
 
@@ -70,6 +61,7 @@
         }
       }
       & ~ .portfolio-more {
+        display: inline-block;
         opacity: 1;
         font-size: inherit;
         max-height: 999em;
@@ -90,98 +82,4 @@
       }
     }
   }
-
-  .portfolio-list {
-    margin-top: 50px;
-    @include clearfix;
-  }
-
-  .portfolio-list_item {
-    position: relative;
-    width: 300px;
-    margin: 0 10px 20px;
-    height: 322px;
-    background-color: #888;
-    float: left;
-
-    a {
-      max-width: 100%;
-      display: block;
-      height: 100%;
-    }
-
-    @media (min-width: $large-bp) {
-      &:nth-child(3n+1) {
-        margin-left: 0;
-      }
-    }
-    @media (max-width: $large-bp) {
-      &:nth-child(2n+1) {
-        margin-left: 0;
-      }
-    }
-    @media (max-width: $small-bp) {
-      &:nth-child(1n+1) {
-        margin: 0 auto;
-        position: static;
-        float: none;
-        margin-bottom: 40px;
-      }
-    }
-    @media (max-width: $extra_small-bp) {
-      margin-left: 0;
-    }
-
-    .portfolio-item--overlay {
-      opacity: 0;
-      background-color: #555;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: 100%;
-
-      h4 {
-        position: absolute;
-        bottom: 0;
-        padding: 35px 10px;
-        width: calc(100% - 20px);
-        background-color: $c-light_background;
-        font-size: 15px;
-        font-weight: bold;
-
-        span {
-          display: block;
-          margin-top: 5px;
-          font-size: 13px;
-          font-weight: normal;
-          text-transform: none;
-        }
-
-        &:after {
-          border-bottom: 15px solid $c-light_background;
-          border-left: 15px solid rgba(0, 0, 0, 0);
-          border-right: 15px solid rgba(0, 0, 0, 0);
-          bottom: -1px;
-          content: "";
-          height: 0;
-          left: 50%;
-          position: absolute;
-          top: -9px;
-          width: 0;
-          margin-left: -20px;
-          opacity: inherit;
-        }
-      }
-    }
-
-    img {
-      max-width: 100%;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-
-
 }

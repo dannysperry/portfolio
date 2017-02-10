@@ -1,6 +1,7 @@
 .section-contact {
-  padding-top: 120px;
-  margin-bottom: 120px;
+  padding-top: 57px;
+  padding-bottom: 28px;
+  min-height: 450px;
   @media (min-width: $small-bp) and (max-width: 680px) {
     .section {
       width: calc(100% - 40px);
@@ -22,7 +23,7 @@
     width: 60%;
     margin-left: 0;
     margin-right: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     float: left;
 
     @media (max-width: $large-bp) {
@@ -45,10 +46,7 @@
      }
     }
 
-    input[type="text"], input[type="email"], textarea, input[type="text"], textarea {
-      background: $c-light_background;
-      border: 0 none;
-      color: #666;
+    input[type="text"], input[type="email"], textarea {
       font-size: 13px;
       margin: 0 0 14px;
       outline: 0 none;
@@ -56,7 +54,7 @@
       resize: none;
       width: calc(100% - 20px);
       font-family: $open-family;
-      border: 1px solid $c-light_background;
+      border: 1px solid;
       @media (max-width: $small-bp) {
        width: calc(100% - 20px);
        float: left;
@@ -74,7 +72,7 @@
     width: calc(#{$large-bp} / 3 - 20px);
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     @media (max-width: $large-bp) {
       width: calc(#{$medium-bp} - 20px);
       margin: 50px 0 0;
@@ -103,9 +101,18 @@
       font-weight: 900;
     }
 
+    b {
+      font-weight: bold;
+    }
+
+    .contact-info--availability {
+      li {
+        margin-left: 20px;
+      }
+    }
+
     li {
       font-size: 13px;
-      color: $c-gray_text;
       line-height: 21px;
       margin-bottom: 2px;
     }

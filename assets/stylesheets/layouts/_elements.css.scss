@@ -62,7 +62,6 @@ em {
 
 a {
   cursor: hand;
-  color: $c-dark_gray;
 }
 
 li a {text-decoration: none;}
@@ -85,13 +84,12 @@ ul.inline li {
   &:before {
     content: "✓";
     display: inline-block;
-    margin: 4px 10px inherit -20px;
+    margin: 4px 10px 0 -20px;
     padding: 0 4px 5px;
     width: 13px;
     height: 16px;
     font-size: 20px;
-    border: 2px solid $c-gray_text;
-    color: $c-dark_gray;
+    border: 2px solid;
   }
 }
 
@@ -103,9 +101,8 @@ ul.inline li {
 
 
 input[type="submit"] {
-  @include box-shadow(rgba(0,0,0,0.1) -1px -4px 0 inset);
   border: none;
-  color: #fff;
+  border-radius: 5px;
   display: inline-block;
   padding: 8px 25px;
   cursor: pointer;
@@ -113,17 +110,6 @@ input[type="submit"] {
 
   &:active, &:visited {
     outline: none;
-  }
-
-  &:hover {
-    @include box-shadow(none);
-    margin-top: 3px;
-    padding-top: 7px;
-
-    @media (max-width: $extra_small-bp) {
-      margin-top: 0;
-      padding-top: 8px;
-    }
   }
 
   @media (max-width: $small-bp) {

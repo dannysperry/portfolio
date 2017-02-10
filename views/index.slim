@@ -1,4 +1,4 @@
-.landing_image
+.section-landing_image
   .landing-caption
     h3.landing-title Web Developer
     h1.landing-subtitle Ruby & ES6
@@ -43,6 +43,12 @@
             h3 iOS
             p
               | I took an iOS course and never really did anything with it. If I'm not working on apps based in rack or rails, then I'm brushin up on some Swift and Cocoa.
+/ .section-blog#blog
+/   .section
+/     h1
+/       a[href="http://dantronics.wordpress.com/" target="_blank"]
+/        | My Blog
+/     p I wish I would post something at least monthly, but realistically its more like quarterly. Admittedly this is furthest down the totem-pole as far as priorities go.
 
 .section-portfolio#portfolio
   .section
@@ -97,13 +103,6 @@
               | T.Y. Lin
             |  - added regional profile section
       label.check_more-trigger[for="check_more"]
-.section-blog#blog
-  .section
-    h1
-      a[href="http://dantronics.wordpress.com/" target="_blank"]
-       | My Blog
-    p I wish I would post something at least monthly, but realistically its more like quarterly. Admittedly this is furthest down the totem-pole as far as priorities go.
-
 
 .section-contact#contact
   .section
@@ -118,20 +117,24 @@
             .column
               input type="text" name="name" placeholder="Name"
             .column
-              input type="text" name="email" placeholder="Email"
+              input type="email" name="email" placeholder="Email"
             textarea name="message" placeholder="Message"
             input.button type="submit" value="Send Message"
 
       .contact-information
         .contact-info--section
-          h2 Danny Sperry
           ul.contact-info--list
-            li Phone: 503.724.1893
             li
-              | Email: <a href="mailto:danny.sperry@gmail.com">danny.sperry@gmail.com</a>
-            li Address: South Bend, WA 98586
+              b Phone: 
+              | 503.724.1893
+            li
+              b Email: 
+              a[href="mailto:danny.sperry@gmail.com"]
+                | danny.sperry@gmail.com
+            li 
+              b Address: 
+              | South Bend, WA 98586
         .contact-info--section
           h2 Availability Status
           ul.contact-info--availability
-            li.unchecked Looking for full-time
-            li.unchecked Seeking moonlight work
+            li.checked Looking for full-time

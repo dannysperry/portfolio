@@ -1,25 +1,21 @@
 $c-purple: #5D2473;
-$c-purple-lighter: #9462A8;
-$c-purple-light: #753C8B;
-$c-purple-dark: #440F59;
-$c-purple-darker: #290238;
+$c-purple--lighter: #9462A8;
+$c-purple--light: #753C8B;
+$c-purple--dark: #440F59;
+$c-purple--darker: #290238;
 
-$c-yellow-base: #A6AC30;
-$c-yellow-lighter: #F5FB8E;
-$c-yellow-light: #C9D054;
-$c-yellow-dark: #7F8511;
-$c-yellow-darker: #505400;
+$c-yellow: #A6AC30;
+$c-yellow--lighter: #F5FB8E;
+$c-yellow--light: #C9D054;
+$c-yellow--dark: #7F8511;
+$c-yellow--darker: #505400;
 
-$c-dark_gray: #343434;
-$c-med_purple: #39187e;
+$c-gray: #707070;
+$c-gray--lighter: #FFF;
+$c-gray--light: #B8B8B8;
+$c-gray--dark: #383838;
+$c-gray--darker: #000;
 
 $c-white: #fff;
 $c-off_white: #f1f1f1;
-
-$c-gray_text: #999;
-$c-light_background: #f2f2f1;
-$c-dark_background: $c-med_purple;
-
-.icon {
-  color: $c-white;
-}
+$c-off_whiter: #f2f2f2;

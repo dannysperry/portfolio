@@ -1,10 +1,8 @@
 header {
   width: 100%;
-  height: $header_height;
-  background: $c-white;
-  color: $c-dark_gray;
   text-transform: uppercase;
-  border-bottom: 3px solid $c-dark_gray;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -20,13 +18,11 @@ header {
   margin: 0 auto;
   @include clearfix;
 
-  .logo {
-    width: 127px;
+  h1 {
     float: left;
     padding: 20px 10px;
-    font-size: $h2-size 10px;
+    font: 18px;
     font-weight: 900;
-    color: $c-dark_gray;
 
     @media (max-width: $small-bp) {
       width: 100%;

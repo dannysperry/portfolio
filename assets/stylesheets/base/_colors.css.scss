@@ -1,0 +1,182 @@
+// _elements.css.scss
+a {
+  color: $c-gray--dark;
+}
+
+input[type="submit"] {
+  color: $c-white;
+}
+
+// _forms.css.scss
+input[type="text"], input[type="email"], textarea, input[type="text"], textarea {
+    background: $c-purple--light;
+    color: $c-gray--light;
+    border: 1px solid $c-purple--light;
+}
+
+// _header.css.scss
+header {
+  background: $c-purple--darker;
+  color: $c-yellow--light;
+  border-bottom-color: $c-gray--dark;
+
+  h1 {
+    color: $c-yellow;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+.section-landing_image {
+  border-color: $c-purple--dark;
+}
+
+// _about.css.scss
+.section-about {
+  .about-section--first {
+    background-color: $c-off_whiter;
+
+    h1 {
+      &, a {
+        color: $c-purple--darker;
+      }
+    }
+    p {
+      color: $c-purple--dark;
+    }
+  }
+
+  .about-section--second {
+    $color: $c-gray--lighter;
+    $text-color: $c-gray--lighter;
+    background-color: $c-purple--dark;
+
+    .about-skill_icons {
+      li {
+        border-color: $color;
+      }
+    }
+    .icon {
+      background-color: $c-purple--dark;
+      border-color: $text-color;
+      color: $text-color;
+
+      &:before {
+        color: $color;
+      }
+    }
+    p {
+      color: darken($text-color, 10%);
+    }
+    h3 {
+      color: $c-yellow--lighter;
+    }
+  }
+}
+
+// _blog.css.scss
+.section-blog {
+  background-color: $c-purple--lighter;
+
+  h1 {
+    &, a {
+      color: $c-yellow--lighter;
+    }
+  }
+  p {
+    color: darken($c-gray--lighter, 10%);
+  }
+}
+
+// _portfolio.css.scss
+.section-portfolio {
+  background-color: $c-purple--darker;
+  color: $c-gray;
+
+  h1 {
+    color: $c-gray--lighter;
+  }
+
+  p {
+    color: $c-gray--light;
+  }
+
+  a {
+    color: $c-yellow--lighter;
+  }
+
+  li {
+    color: $c-gray--light;
+  }
+
+  .check_more-trigger {
+    color: $c-yellow--darker;
+    background-color: $c-yellow;
+    border-color: $c-yellow--lighter;
+  }
+}
+
+.section-contact {
+  $background-color: $c-off_whiter;
+  $border-color: $c-off_whiter;
+  $border-color: $c-gray;
+}
+// _contact.css.scss
+.section-contact {
+  h1, h2, a:hover {
+    color: $c-purple;
+  }
+  p, li, a {
+    color: $c-purple--dark;
+  }
+  .contact-form {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background: $c-yellow--lighter;
+      border-color: $c-purple--lighter;
+      color: $c-purple--dark;
+
+      &::-webkit-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        color: $c-purple--dark !important;
+      }
+    }
+    .button {
+      background-color: $c-purple--lighter;
+      &:hover {
+        background-color: $c-purple;
+      }
+    }
+  }
+  .checked, .unchecked {
+    color: $c-purple;
+    &:before {
+      color: $c-purple;
+    }
+  }
+}
+
+// _footer.css.scss
+#footer {
+  background: $c-purple--darker;
+
+  .socialLinks {
+    li {
+      a {
+        border-color: $c-purple--lighter;
+        color: $c-purple--lighter;
+        &:hover {
+          color: $c-yellow--lighter;
+          border-color: $c-yellow--lighter;
+        }
+      }
+    }
+  }
+  p {
+    color: $c-purple--lighter;
+  }
+}
