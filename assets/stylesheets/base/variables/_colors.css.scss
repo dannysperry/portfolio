@@ -1,14 +1,39 @@
-$c-purple: #5D2473;
-$c-purple--lighter: #9462A8;
-$c-purple--light: #753C8B;
-$c-purple--dark: #440F59;
-$c-purple--darker: #290238;
+// $c-purple: #5D2473;
+// $c-purple--lighter: #9462A8;
+// $c-purple--light: #753C8B;
+// $c-purple--dark: #440F59;
+// $c-purple--darker: #290238;
 
-$c-yellow: #A6AC30;
-$c-yellow--lighter: #F5FB8E;
-$c-yellow--light: #C9D054;
-$c-yellow--dark: #7F8511;
-$c-yellow--darker: #505400;
+// $c-yellow: #A6AC30;
+// $c-yellow--lighter: #F5FB8E;
+// $c-yellow--light: #C9D054;
+// $c-yellow--dark: #7F8511;
+// $c-yellow--darker: #505400;
+
+$color-primary: #538659;  // Main Primary color */
+$color-primary--lighter: #A4C3A8;
+$color-primary--light: #76A17B;
+$color-primary--dark: #396B3F;
+$color-primary--darker: #205927;
+
+$color-complement: #8BA163; // Main Complement color */
+$color-complement--lighter: #DCE9C5;
+$color-complement--light: #AFC18D;
+$color-complement--dark: #6B8044;
+$color-complement--darker: #526A26;
+
+
+$c-purple: $color-primary;
+$c-purple--lighter: $color-primary--lighter;
+$c-purple--light: $color-primary--light;
+$c-purple--dark: $color-primary--dark;
+$c-purple--darker: $color-primary--darker;
+
+$c-yellow: $color-complement;
+$c-yellow--lighter: $color-complement--lighter;
+$c-yellow--light: $color-complement--light;
+$c-yellow--dark: $color-complement--dark;
+$c-yellow--darker: $color-complement--darker;
 
 $c-gray: #707070;
 $c-gray--lighter: #FFF;
