@@ -1,8 +1,8 @@
 $landing_image-height: 526px;
 
 .section-landing_image {
-  background: url('../../images/forest.jpg') no-repeat center center fixed;
-  background-size: fill;
+  background: url('../../images/forest_flat.jpg') no-repeat center center fixed;
+  background-size: cover;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   @include clearfix;

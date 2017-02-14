@@ -14,40 +14,8 @@ html
     script[src="/js/smooth_scroll.js"]
   body
     .main_wrapper#root
-      header
-        section.header-container
-          h1.logo Danny Sperry
-          nav
-            ul.inline
-              li.about
-                a[href="#about"]
-                  | About
-              li.portfolio
-                a[href="#portfolio"]
-                  | Portfolio
-              li.blog
-                a[href="http://dantronics.wordpress.com/"]
-                  | Blog
-              li.contact
-                a[href="#blog"]
-                  | Contact
+      == slim :_header
       .content_wrapper
         == yield
       #root_footer
-    footer#footer
-      .footer_wrapper
-        ul.socialLinks
-          li.footer_icon-twitter
-            a href="https://twitter.com/dannysperry"
-          li.footer_icon-linkedin
-            a href="https://www.linkedin.com/in/dannysperry"
-          li.footer_icon-wordpress
-            a href="http://dantronics.wordpress.com/"
-          li.footer_icon-github
-            a href="https://github.com/dannysperry"
-          li.footer_icon-stackoverflow
-            a href="http://stackoverflow.com/users/892726/dd-s"
-        p
-          |  &copy
-          = Date.today.year
-          |  Danny Sperry
+    == slim :_footer

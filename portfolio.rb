@@ -61,7 +61,7 @@ class Portfolio < Sinatra::Base
     mail[:body] = "From #{params[:email]},
 
     #{params[:message]}"
-    mail[:subject] = "dannysperry.pw - #{params[:name]}"
+    mail[:subject] = "dannysperry.com - #{params[:name]}"
     mail.deliver!
 
     redirect '/'
