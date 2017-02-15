@@ -1,0 +1,133 @@
+// forms
+form {
+  width: 60%;
+  margin-left: 0;
+  margin-right: 20px;
+  margin-top: 50px;
+
+  @media (max-width: $large-bp) {
+    width: 100%;
+  }
+
+  .row {
+    .column {
+      width: calc(50% - 5px);
+      @media (max-width: $small-bp) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+  input[type="text"], input[type="email"], textarea {
+    margin: 0 0 14px;
+    padding: 12px 10px;
+    width: calc(100% - 20px);
+    @media (max-width: $small-bp) {
+      width: calc(100% - 20px);
+    }
+  }
+
+  textarea {
+    height: 190px;
+  }
+}
+
+// elements
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: $header-height;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+.checked, .unchecked {
+  &:before {
+    margin: 4px 10px 0 -20px;
+    padding: 0 4px 5px;
+    width: 13px;
+    height: 16px;
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid;
+  border-radius: .25em;
+}
+
+// header
+header {
+  width: 100%;
+  border-bottom-width: 3px;
+}
+
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+
+  h1 {
+    padding: 20px 10px 0;
+
+    @media (max-width: $small-bp) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  nav {
+    width: auto;
+
+    @media (max-width: $small-bp) {
+      width: 100%;
+    }
+  }
+}
+
+.header-container nav {
+  li {
+    a {
+      padding: 25px 15px;
+
+      @media (max-width: $small-bp) {
+        padding: 5px 13px;
+      }
+    }
+  }
+}
+
+// sticky_footer
+
+.button {
+  padding: 8px 25px;
+
+  @media (max-width: $small-bp) {
+    width: calc(100% + 2px);
+  }
+
+  @media (max-width: $extra_small-bp) {
+    width: 300px;
+  }
+}
+
+
+

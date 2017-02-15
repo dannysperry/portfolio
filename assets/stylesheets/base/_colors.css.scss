@@ -3,12 +3,16 @@ a {
   color: $c-gray--dark;
 }
 
-input[type="submit"] {
+.button {
+  background-color: $c-purple--lighter;
   color: $c-white;
+  &:hover {
+    background-color: $c-purple;
+  }
 }
 
 // _forms.css.scss
-input[type="text"], input[type="email"], textarea, input[type="text"], textarea {
+input[type="text"], input[type="email"], textarea {
     background: $c-purple--light;
     color: $c-gray--light;
     border: 1px solid $c-purple--light;
@@ -99,7 +103,8 @@ header {
     color: $c-gray--lighter;
   }
 
-  p {
+  p,
+  li {
     color: $c-gray--light;
   }
 
@@ -107,15 +112,11 @@ header {
     color: $c-yellow--lighter;
   }
 
-  li {
-    color: $c-gray--light;
-  }
-
-  .check_more-trigger {
-    color: $c-yellow--darker;
-    background-color: $c-yellow;
-    border-color: $c-yellow--lighter;
-  }
+  // .check_more-trigger {
+  //   color: $c-yellow--darker;
+  //   background-color: $c-yellow;
+  //   border-color: $c-yellow--lighter;
+  // }
 }
 
 .section-contact {
@@ -144,12 +145,6 @@ header {
       &::-moz-placeholder,
       &:-ms-input-placeholder {
         color: $c-purple--dark !important;
-      }
-    }
-    .button {
-      background-color: $c-purple--lighter;
-      &:hover {
-        background-color: $c-purple;
       }
     }
   }

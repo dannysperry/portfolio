@@ -100,7 +100,11 @@ ul.inline li {
 
 
 
-input[type="submit"] {
+input[type="submit"], 
+.button {
+  align-items: flex-start;
+  text-align: center;
+  box-sizing: border-box;
   border: none;
   border-radius: 5px;
   display: inline-block;
