@@ -8,6 +8,8 @@ gem 'sass'
 gem 'compass'
 gem 'mail'
 gem 'newrelic_rpm'
+gem 'unicorn'
+gem 'json'
 
 group :development do
   gem 'sinatra-reloader'

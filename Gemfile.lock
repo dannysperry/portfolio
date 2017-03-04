@@ -17,6 +17,8 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     ffi (1.9.6)
+    json (2.0.3)
+    kgio (2.11.0)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
@@ -32,6 +34,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    raindrops (0.17.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -55,12 +58,16 @@ GEM
     slop (3.6.0)
     temple (0.6.10)
     tilt (1.4.1)
+    unicorn (5.2.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   compass
+  json
   mail
   newrelic_rpm
   pry
@@ -69,6 +76,7 @@ DEPENDENCIES
   sinatra-contrib
   sinatra-reloader
   slim
+  unicorn
 
 RUBY VERSION
    ruby 2.4.0p0
