@@ -11,6 +11,9 @@ header {
 
 .nav-up {
   top: -$header_height;
+  @media (max-width: $small-bp) {
+    top: -$header_height--mobile;
+  }
 }
 
 .header-container {

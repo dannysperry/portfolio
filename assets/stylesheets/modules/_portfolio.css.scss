@@ -1,8 +1,12 @@
 .section-portfolio {
   padding-top: 57px;
   padding-bottom: 28px;
-  @media (max-width: $small-bp) {padding-top: 39px;}
-
+  @media (max-width: $small-bp) {
+    padding-top: 39px;
+  }
+  @media (max-width: $extra_small-bp) {
+    padding-bottom: 68px;
+  }
   h1 {
     margin-bottom: 10px;
   }
@@ -60,6 +64,9 @@
 
     & ~ .check_more-trigger {
       margin: 30px 0;
+      @media (max-width: $small-bp) {
+        margin: 10px 0;
+      }
 
       &:first-of-type {
         display: inline-block;

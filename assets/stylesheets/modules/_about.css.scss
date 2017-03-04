@@ -18,15 +18,18 @@
       float: none;
       display: block;
       @include clearfix;
+      &.about-section--first {
+        height: 388px;
+      }
     }
     @media (max-width: $small-bp) {
-      height: 414px;
+      height: 344px;
       &.about-section--second {
         height: 425px;
       }
     }
     @media (max-width: $extra_small-bp) {
-      height: 550px;
+      height: 470px;
     }
   }
 
