@@ -1,8 +1,10 @@
 require 'rubygems'
 require 'compass'
-require 'sinatra/base'
-require 'sinatra/config_file'
+require 'sinatra'
 require 'slim'
+require 'json'
+require 'rack/recaptcha'
+require 'pony'
 require 'mail'
 
 # Base routes and setup actions for racks config.ru
@@ -53,6 +55,21 @@ class Portfolio < Sinatra::Base
 
   get '/' do
     slim :index
+  end
+
+  post '/mail/growers_outlet' do
+    content_type :json
+    headers 'Access-Control-Allow-Origin' => '*',
+          'Access-Control-Allow-Methods' => ['POST']
+    mail = Mail.new { to 'growersoutlet1@gmail.com' }
+    mail[:from] = "#{params[:email]}"
+    mail[:body] = "Hey Growers Outlet!
+
+    #{params[:message]}
+
+    #{params[:name]}"
+    mail[:subject] = "#{params[:name]} has sent you a message from your website"
+    mail.deliver!
   end
 
   post '/' do
