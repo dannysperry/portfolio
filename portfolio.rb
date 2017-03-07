@@ -58,9 +58,9 @@ class Portfolio < Sinatra::Base
 
   post '/mail/growers_outlet' do
     content_type :json
-    headers 'Access-Control-Allow-Origin' => '*',
+    headers 'Access-Control-Allow-Origin' => 'http://grolarllc.github.io/growers_outlet',
           'Access-Control-Allow-Methods' => ['POST']
-    mail = Mail.new { to 'dannysperry@gmail.com' }
+    mail = Mail.new { to 'growers_outlet1@gmail.com' }
     mail[:from] = "#{params[:email]}"
     mail[:body] = "Hey Growers Outlet!
 
