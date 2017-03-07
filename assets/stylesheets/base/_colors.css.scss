@@ -98,18 +98,28 @@ header {
 .section-portfolio {
   background-color: $c-purple--darker;
   color: $c-gray;
-
   h1 {
-    color: $c-gray--lighter;
+    color: $color-complement--light;
   }
 
-  p,
-  li {
-    color: $c-gray--light;
+  p, li {
+    color: $color-complement;
   }
 
   a {
     color: $c-yellow--lighter;
+    &:hover {
+
+    }
+  }
+
+  span {
+    color: $color-complement--lighter;
+  }
+  .with_bullet {
+    li {
+      color: $c-off_whiter;
+    }
   }
 
   // .check_more-trigger {

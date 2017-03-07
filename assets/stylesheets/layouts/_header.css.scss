@@ -24,7 +24,6 @@ header {
   h1 {
     float: left;
     padding: 20px 10px 0;
-    font: 18px;
     font-weight: 900;
 
     @media (max-width: $small-bp) {
@@ -37,7 +36,6 @@ header {
   nav {
     float: right;
     width: auto;
-    font-size: $h4-size;
     font-weight: bold;
     text-align: right;
 

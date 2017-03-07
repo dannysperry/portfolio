@@ -1,35 +1,15 @@
 .section-about {
-  margin: 0 auto;
-  @include clearfix;
-  height: 500px;
+  display: flex;
+  flex-direction: row;
   @media (max-width: $large-bp) {
-    height: auto;
-    width: 100%;
+    flex-direction: column;
   }
 
 
   div[class^="about-section"] {
-    width: 50%;
-    height: 500px;
-    float: left;
-    display: inline-block;
+    flex: 1 0 0;
     @media (max-width: $large-bp) {
-      width: 100%;
-      float: none;
-      display: block;
-      @include clearfix;
-      &.about-section--first {
-        height: 388px;
-      }
-    }
-    @media (max-width: $small-bp) {
-      height: 344px;
-      &.about-section--second {
-        height: 425px;
-      }
-    }
-    @media (max-width: $extra_small-bp) {
-      height: 470px;
+      
     }
   }
 
@@ -87,7 +67,7 @@
     }
 
     li {
-      height: 101px;
+      height: auto;
       padding-bottom: 35px;
       border-left-width: 2px;
       border-left-style: dashed;

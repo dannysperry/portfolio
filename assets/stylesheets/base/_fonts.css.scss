@@ -200,3 +200,49 @@
 .icon-osx, .icon-bomb, .icon-mobile-phone-broadcast, .icon-objc, .icon-nginx-alt2, .icon-mysql, .icon-phone-retro, .icon-netbsd, .icon-mobile-device, .icon-ruby-on-rails, .icon-phone-alt, .icon-line-graph, .icon-postgres, .icon-playframework, .icon-python, .icon-ruby-on-rails-alt, .icon-nginx, .icon-database-alt2, .icon-google-alt, .icon-microscope, .icon-blackberry, .icon-dreamhost, .icon-google, .icon-centos, .icon-kde, .icon-csharp, .icon-scala, .icon-redis, .icon-looking, .icon-database-alt, .icon-javascript, .icon-postgres-alt, .icon-linux-mint, .icon-ubuntu, .icon-apache, .icon-script-alt, .icon-mssql, .icon-c, .icon-gnome, .icon-java-duke, .icon-scala-alt, .icon-clojure, .icon-oracle-alt, .icon-redhat, .icon-haskell, .icon-3dprint, .icon-mariadb, .icon-java, .icon-script, .icon-cplusplus, .icon-jetty, .icon-perl, .icon-heroku, .icon-nginx-alt, .icon-iphone, .icon-splatter, .icon-shell, .icon-mysql-alt, .icon-wireless, .icon-ruby, .icon-playframework-alt, .icon-raspberrypi, .icon-suse, .icon-nodejs, .icon-java-bold, .icon-google-developers, .icon-mobile-phone-alt, .icon-grails-alt, .icon-coffee-bean, .icon-cassandra, .icon-google-code, .icon-fedora, .icon-antenna, .icon-hadoop, .icon-solaris, .icon-html, .icon-css, .icon-satellite, .icon-aws, .icon-mfizz, .icon-php, .icon-debian, .icon-ghost, .icon-php-alt, .icon-tomcat, .icon-database, .icon-grails, .icon-freebsd, .icon-oracle, .icon-fire-alt, .icon-platter{
   font-family: "FontMfizz";
 }
+
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 07/03/2017 23:56
+    */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../../fonts/Flaticon.eot");
+  src: url("../../../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../../../fonts/Flaticon.woff") format("woff"),
+       url("../../../fonts/Flaticon.ttf") format("truetype"),
+       url("../../../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../../../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fi:after{
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+$font-flaticon-chevron-arrow-down: "\f100";
+$font-flaticon-chevron-arrow-up: "\f101";
+
+.flaticon-chevron-arrow-down:before { content: $font-flaticon-chevron-arrow-down; }
+.flaticon-chevron-arrow-up:before { content: $font-flaticon-chevron-arrow-up; }
+

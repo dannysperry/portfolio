@@ -1,33 +1,32 @@
 // forms
 form {
   width: 60%;
-  margin-left: 0;
-  margin-right: 20px;
-  margin-top: 50px;
 
   @media (max-width: $large-bp) {
     width: 100%;
   }
 
   .row {
+    display: flex;
+    flex-direction: row;
     .column {
-      width: calc(50% - 5px);
+      flex-direction: column;
+      flex: 1 0 0;
       @media (max-width: $small-bp) {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      &:first-of-type {
-        margin-right: 10px;
+        flex-direction: row;
       }
     }
   }
   input[type="text"], input[type="email"], textarea {
-    margin: 0 0 14px;
     padding: 12px 10px;
-    width: calc(100% - 20px);
+    
     @media (max-width: $small-bp) {
-      width: calc(100% - 20px);
+      
     }
+  }
+
+  input[type="text"], input[type="email"] {
+    flex-direction: column;
   }
 
   textarea {
@@ -44,17 +43,22 @@ body {
   padding-top: $header-height;
 }
 
-h1 {
-  margin-bottom: 15px;
+html {
+  font-size: 16px;
+  line-height: 1.2em;
+
+  @media (min-width: 800px) {
+    font-size: 18px;
+    line-height: 1.3em
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.4em;
+  }
 }
 
-h2 {
-  margin-bottom: 10px;
-}
 
-h3 {
-  margin-bottom: 5px;
-}
 
 .checked, .unchecked {
   &:before {

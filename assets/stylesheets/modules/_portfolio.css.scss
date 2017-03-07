@@ -12,7 +12,8 @@
   }
 
   p {
-    line-height: 15px;
+    line-height: 1.25em;
+    margin-bottom: 10px;
   }
 
   .portfolio-more {
@@ -28,8 +29,6 @@
 
     li {
       margin-bottom: 8px;
-      font-size: 13px;
-      line-height: 15px;
 
       a {
         &:hover {
@@ -53,6 +52,9 @@
         &:before {
           content: 'Show less';
         }
+        &:after {
+          content: $font-flaticon-chevron-arrow-up;
+        }
       }
       & ~ .portfolio-more {
         display: inline-block;
@@ -63,7 +65,11 @@
     }
 
     & ~ .check_more-trigger {
+      width: 100%;
+      text-align: center;
+      color: $color-complement--lighter;
       margin: 30px 0;
+      position: relative;
       @media (max-width: $small-bp) {
         margin: 10px 0;
       }
@@ -76,6 +82,13 @@
       }
       &:before {
         content: 'Show more';
+      }
+      &:after {
+        content: $font-flaticon-chevron-arrow-down;
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        left: 0;
       }
     }
   }
