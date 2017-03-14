@@ -13,9 +13,15 @@ a {
 
 // _forms.css.scss
 input[type="text"], input[type="email"], textarea {
-    background: $c-purple--light;
-    color: $c-gray--light;
+    background: #91b8a5;
+    color: $color-complement--light;
     border: 1px solid $c-purple--light;
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: $color-complement--light;
+    }
 }
 
 // _header.css.scss
@@ -129,11 +135,6 @@ header {
   // }
 }
 
-.section-contact {
-  $background-color: $c-off_whiter;
-  $border-color: $c-off_whiter;
-  $border-color: $c-gray;
-}
 // _contact.css.scss
 .section-contact {
   h1, h2, a:hover {
@@ -141,22 +142,6 @@ header {
   }
   p, li, a {
     color: $c-purple--dark;
-  }
-  .contact-form {
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      background: $c-yellow--lighter;
-      border-color: $c-purple--lighter;
-      color: $c-purple--dark;
-
-      &::-webkit-input-placeholder,
-      &:-moz-placeholder,
-      &::-moz-placeholder,
-      &:-ms-input-placeholder {
-        color: $c-purple--dark !important;
-      }
-    }
   }
   .checked, .unchecked {
     color: $c-purple;

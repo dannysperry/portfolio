@@ -16,6 +16,12 @@
     margin-bottom: 10px;
   }
 
+  .portfolio-container {
+    @media(max-width: $medium-bp) {
+      display: none;
+    }
+  }
+
   .portfolio-more {
     display: none;
     opacity: 0;
@@ -87,7 +93,7 @@
         content: $font-flaticon-chevron-arrow-down;
         position: absolute;
         width: 100%;
-        top: 20px;
+        top: 25px;
         left: 0;
       }
     }
